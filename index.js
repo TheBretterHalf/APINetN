@@ -3,10 +3,7 @@ const express = require('express');
 // set up express app
 const app = express();
 
-app.get('/api', function(req, res){
-    console.log('GET request')
-    res.send({name:'yoshi'});
-});
+app.use('/api', require('./routes/api'));
 
 //listen for requests
 app.listen(process.env.PORT, process.env.IP , function(){
