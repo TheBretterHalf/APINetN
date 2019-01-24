@@ -9,7 +9,7 @@ router.post('/ninjas', function (req, res){
     res.send({type: 'POST'})    
 });
 //udpate ninja in db
-router.put('/ninjas/:id', function (req, res){
+router.put('/ninjas/something', function (req, res){
     res.send({type: 'PUT'})    
 });
 //delete ninja from db
