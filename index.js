@@ -1,7 +1,11 @@
+const bodyParser = require('body-parser');
+
 const express = require('express');
 
 // set up express app
 const app = express();
+
+app.use(bodyParser.json())
 
 app.use('/api', require('./routes/api'));
 

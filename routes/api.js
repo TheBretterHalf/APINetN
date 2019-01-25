@@ -6,10 +6,14 @@ router.get('/ninjas', function (req, res){
 });
 //add new ninja to db
 router.post('/ninjas', function (req, res){
-    res.send({type: 'POST'})    
+    console.log(req.body);
+    res.send({type: 'POST',
+    name:req.body.name,
+    rank:req.body.rank
+    });    
 });
 //udpate ninja in db
-router.put('/ninjas/something', function (req, res){
+router.put('/ninjas/:id', function (req, res){
     res.send({type: 'PUT'})    
 });
 //delete ninja from db
